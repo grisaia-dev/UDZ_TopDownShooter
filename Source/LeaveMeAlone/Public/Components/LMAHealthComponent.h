@@ -7,7 +7,6 @@
 #include "LMAHealthComponent.generated.h"
 
 DECLARE_MULTICAST_DELEGATE(FOnDeath)
-DECLARE_MULTICAST_DELEGATE_OneParam(FOnHealthChanged, float)
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class LEAVEMEALONE_API ULMAHealthComponent : public UActorComponent {
@@ -29,7 +28,6 @@ public:
 	bool IsHealthFull() const;
 
 	FOnDeath OnDeath;
-	FOnHealthChanged OnHealthChanged;
 
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)

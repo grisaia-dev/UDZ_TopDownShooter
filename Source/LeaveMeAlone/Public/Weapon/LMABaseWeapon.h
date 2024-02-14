@@ -37,6 +37,7 @@ public:
 	void StopFire();
 	void ChangeClip();
 	bool IsCurrentClipFull() const;
+	FAmmoWeapon GetCurrentAmmoWeapon() const { return CurrentAmmoWeapon; }
 
 	FOnClipIsEmpty OnClipIsEmpty;
 protected:

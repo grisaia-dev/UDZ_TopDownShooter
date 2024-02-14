@@ -55,7 +55,5 @@ bool ALMABaseWeapon::IsCurrentClipEmpty() const { return CurrentAmmoWeapon.Bulle
 bool ALMABaseWeapon::IsCurrentClipFull() const { return CurrentAmmoWeapon.Bullets == 30; }
 void ALMABaseWeapon::DecrementBullets() {
 	CurrentAmmoWeapon.Bullets = FMath::Clamp(CurrentAmmoWeapon.Bullets - 1, 0, 30);
-	GEngine->AddOnScreenDebugMessage(4, 2.0f, FColor::Green, FString::Printf(TEXT("Reload?: %i"), CurrentAmmoWeapon.Bullets));
-	//UE_LOG(LogWeapon, Display, TEXT("Bullets = %s"), *FString::FromInt(CurrentAmmoWeapon.Bullets));
 	OnClipIsEmpty.Broadcast(IsCurrentClipEmpty());
 }

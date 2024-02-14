@@ -70,7 +70,6 @@ private:
 	// ----
 
 	void OnDeath();
-	void OnHealthChanged(float NewHealth);
 
 	void RotationPlayerOnCursor();
 
